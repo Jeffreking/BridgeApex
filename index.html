@@ -20,16 +20,14 @@
 
         /* Navbar */
         .navbar {
-            position: fixed;
-            left: 0;
+            position: absolute;
             top: 0;
-            height: 100%;
-            width: 200px;
+            width: 100%;
             background-color: #1a1a1a;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20px;
+            justify-content: center;
+            padding: 20px 0;
+            z-index: 10;
             transform: translateY(-100%);
             animation: slideInNav 1s ease-out forwards;
         }
@@ -44,7 +42,7 @@
             color: #FFD700;
             text-decoration: none;
             font-size: 18px;
-            margin: 15px 0;
+            margin: 0 20px;
             transition: color 0.3s, transform 0.3s;
         }
 
@@ -63,6 +61,7 @@
             background: url('https://images.unsplash.com/photo-1497366216548-37526070297c') no-repeat center center/cover;
             position: relative;
             animation: popIn 0.05s ease-in forwards;
+            padding-top: 80px; /* Space for navbar */
         }
 
         @keyframes popIn {
@@ -109,8 +108,6 @@
             padding: 80px 20px;
             max-width: 1000px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
             position: relative;
             background: url('https://images.unsplash.com/photo-1516321318423-6e40e0d2944f') no-repeat center center/cover;
             border-radius: 10px;
@@ -141,16 +138,176 @@
             z-index: 1;
             color: #FFD700;
             animation: fadeInText 1s ease-in;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .about-content h2 {
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h2 {
             font-size: 36px;
             margin-bottom: 20px;
         }
 
-        .about-content p {
+        .about-text p {
             font-size: 18px;
             line-height: 1.6;
+            color: #FFFFFF;
+        }
+
+        .elevator-pitch {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .elevator-pitch video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: 2px solid #FFD700;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .experience h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .experience-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .experience-timeline,
+        .services {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .experience-item,
+        .service-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .experience-item:hover,
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-item h3,
+        .service-item h3 {
+            font-size: 24px;
+            color: #FFD700;
+        }
+
+        .experience-item p,
+        .service-item p {
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+
+        /* Education Section */
+        .education {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .education h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-item h3 {
+            font-size: 24px;
+            color: #FFD700;
+        }
+
+        .education-item p {
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .projects h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .project-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-item {
+            width: 300px;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .project-item h3 {
+            font-size: 22px;
+            color: #FFD700;
+        }
+
+        .project-item p {
+            font-size: 16px;
             color: #FFFFFF;
         }
 
@@ -226,6 +383,12 @@
             margin-bottom: 20px;
         }
 
+        .contact p {
+            font-size: 18px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+        }
+
         .contact form {
             max-width: 600px;
             margin: 0 auto;
@@ -277,6 +440,8 @@
         <a href="#experience">Experience</a>
         <a href="#education">Education</a>
         <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <!-- Hero Section -->
@@ -287,13 +452,97 @@
     <!-- About Me Section -->
     <section id="about" class="about">
         <div class="about-content">
-            <h2>About Me</h2>
-            <p>I am Jeffrey Uwoghiren, an experienced Salesforce Administrator dedicated to optimizing business processes through innovative Salesforce solutions. With a deep understanding of Salesforce configuration, automation, and user management, I help organizations streamline operations, enhance data integrity, and drive growth. My expertise includes creating custom workflows, reports, dashboards, and ensuring seamless integration to meet unique business needs. Passionate about delivering scalable solutions, I prioritize efficiency, security, and user adoption in every project.</p>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I am Jeffrey Uwoghiren, an experienced Salesforce Administrator dedicated to optimizing business processes through innovative Salesforce solutions. With a deep understanding of Salesforce configuration, automation, and user management, I help organizations streamline operations, enhance data integrity, and drive growth. My expertise includes creating custom workflows, reports, dashboards, and ensuring seamless integration to meet unique business needs. Passionate about delivering scalable solutions, I prioritize efficiency, security, and user adoption in every project.</p>
+            </div>
+            <div class="elevator-pitch">
+                <h3>Elevator Pitch</h3>
+                <video controls>
+                    <source src="path-to-your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="experience-content">
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3>Salesforce Administrator - TechCorp Solutions</h3>
+                    <p>Jan 2022 - Present</p>
+                    <p>Led Salesforce customization for a 200-user organization, implementing automated workflows, custom objects, and Lightning components. Improved sales pipeline efficiency by 30% through optimized reports and dashboards.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Junior Salesforce Admin - Innovate Systems</h3>
+                    <p>Jun 2019 - Dec 2021</p>
+                    <p>Managed user accounts, security settings, and data imports. Developed validation rules and process builder automations, reducing manual data entry by 25%.</p>
+                </div>
+            </div>
+            <div class="services">
+                <h3>Core Services</h3>
+                <div class="service-item">
+                    <h3>Workflow Automation</h3>
+                    <p>Design and implement Process Builder and Flow automations to streamline repetitive tasks.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Reports & Dashboards</h3>
+                    <p>Create dynamic reports and dashboards to provide real-time business insights.</p>
+                </div>
+                <div class="service-item">
+                    <h3>User Management</h3>
+                    <p>Configure roles, profiles, and permission sets to ensure secure and efficient access control.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Data Integrity</h3>
+                    <p>Implement validation rules and duplicate management to maintain clean, reliable data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>ALX Salesforce Administrator Certification</h3>
+            <p>Completed: 2021</p>
+            <p>Comprehensive training in Salesforce administration, covering configuration, automation, security, and app development.</p>
+        </div>
+        <div class="education-item">
+            <h3>B.Sc. Computer Science - University of Lagos</h3>
+            <p>Graduated: 2019</p>
+            <p>Studied software development, database management, and system administration, providing a strong technical foundation for Salesforce expertise.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Portfolio Dashboard">
+                <h3>Portfolio Dashboard</h3>
+                <p>Built a custom Salesforce dashboard for a client to track sales KPIs, featuring Lightning components and dynamic filters.</p>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Sales Cloud Implementation">
+                <h3>Sales Cloud Implementation</h3>
+                <p>Configured Sales Cloud for a mid-sized firm, including lead management, opportunity tracking, and automated email alerts.</p>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e84b01" alt="Custom App">
+                <h3>Custom App Development</h3>
+                <p>Developed a Salesforce app using Apex and Visualforce to manage customer support tickets, reducing response time by 20%.</p>
+            </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonial-container">
             <div class="testimonial">
@@ -305,4 +554,19 @@
                 <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="Client 2">
                 <p>"Working with Jeffrey was a game-changer. His dashboards gave us insights we never had before."</p>
                 <h4>John Smith, Operations Manager</h4>
-           
+            </div>
+            <div class="testimonial">
+                <img src="https://images.unsplash.com/photo-1534528744316-7d86d22258c9" alt="Client 3">
+                <p>"Jeffrey's automation solutions saved us countless hours. Highly recommend his services!"</p>
+                <h4>Emily Chen, Sales Director</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:jeffreyuwoghiren@gmail.com" style="color: #FFD700;">jeffreyuwoghiren@gmail.com</a></p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="
