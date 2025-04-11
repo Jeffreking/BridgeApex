@@ -124,7 +124,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 161, 224, 0.7); /* Salesforce Blue overlay */
+            background: rgba(0, 161, 224, 0.3); /* Lighter Salesforce Blue overlay for better text visibility */
             border-radius: 10px;
             animation: fadeInBg 0.1s ease-in;
         }
@@ -140,7 +140,7 @@
 
         .about-content {
             z-index: 1;
-            animation: fadeInText 1s ease-in;
+            animation: fadeInText 1s ease-in forwards; /* Ensure text stays opaque */
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
@@ -149,6 +149,9 @@
         .about-text {
             flex: 1;
             min-width: 300px;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for text clarity */
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .about-text h2 {
@@ -163,7 +166,7 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            color: #E1F5FE; /* Sky Blue Tint */
+            color: #333333; /* Charcoal Gray for high contrast */
         }
 
         .elevator-pitch {
@@ -188,6 +191,64 @@
         }
 
         /* Experience Section */
+        .experience {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .experience h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .experience-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .experience-timeline,
+        .services {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .experience-item,
+        .service-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #E1F5FE; /* Sky Blue Tint */
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .experience-item:hover,
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-item h3,
+        .service-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #00A1E0; /* Salesforce Blue */
+        }
+
+        .experience-item p,
+        .service-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        /* Education Section */
         .experience {
             padding: 80px 20px;
             max-width: 1000px;
