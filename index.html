@@ -124,7 +124,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 161, 224, 0.3); /* Lighter Salesforce Blue overlay for better text visibility */
+            background: rgba(0, 161, 224, 0.3); /* Lighter Salesforce Blue overlay */
             border-radius: 10px;
             animation: fadeInBg 0.1s ease-in;
         }
@@ -140,16 +140,23 @@
 
         .about-content {
             z-index: 1;
-            animation: fadeInText 1s ease-in forwards; /* Ensure text stays opaque */
+            animation: fadeInText 1s ease-in forwards;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .about-top {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
+            align-items: center;
         }
 
         .about-text {
             flex: 1;
             min-width: 300px;
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for text clarity */
+            background: rgba(255, 255, 255, 0.9); /* White panel for text clarity */
             padding: 20px;
             border-radius: 10px;
         }
@@ -166,13 +173,31 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            color: #333333; /* Charcoal Gray for high contrast */
+            color: #333333; /* Charcoal Gray */
         }
 
-        .elevator-pitch {
+        .profile-picture {
             flex: 1;
             min-width: 300px;
             text-align: center;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #4B0082; /* Vibrant Indigo */
+            transition: transform 0.3s ease;
+        }
+
+        .profile-picture img:hover {
+            transform: scale(1.05);
+        }
+
+        .elevator-pitch {
+            text-align: center;
+            margin-top: 20px;
         }
 
         .elevator-pitch h3 {
@@ -191,64 +216,6 @@
         }
 
         /* Experience Section */
-        .experience {
-            padding: 80px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            animation: fadeInText 1s ease-in;
-        }
-
-        .experience h2 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 36px;
-            color: #333333;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .experience-content {
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .experience-timeline,
-        .services {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .experience-item,
-        .service-item {
-            margin-bottom: 20px;
-            padding: 20px;
-            background: #E1F5FE; /* Sky Blue Tint */
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .experience-item:hover,
-        .service-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .experience-item h3,
-        .service-item h3 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            font-size: 24px;
-            color: #00A1E0; /* Salesforce Blue */
-        }
-
-        .experience-item p,
-        .service-item p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 16px;
-            color: #333333;
-        }
-
-        /* Education Section */
         .experience {
             padding: 80px 20px;
             max-width: 1000px;
@@ -572,9 +539,14 @@
     <!-- About Me Section -->
     <section id="about" class="about">
         <div class="about-content">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I am Jeffrey Uwoghiren, an experienced Salesforce Administrator dedicated to optimizing business processes through innovative Salesforce solutions. With a deep understanding of Salesforce configuration, automation, and user management, I help organizations streamline operations, enhance data integrity, and drive growth. My expertise includes creating custom workflows, reports, dashboards, and ensuring seamless integration to meet unique business needs. Passionate about delivering scalable solutions, I prioritize efficiency, security, and user adoption in every project.</p>
+            <div class="about-top">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I am Jeffrey Uwoghiren, an experienced Salesforce Administrator dedicated to optimizing business processes through innovative Salesforce solutions. With a deep understanding of Salesforce configuration, automation, and user management, I help organizations streamline operations, enhance data integrity, and drive growth. My expertise includes creating custom workflows, reports, dashboards, and ensuring seamless integration to meet unique business needs. Passionate about delivering scalable solutions, I prioritize efficiency, security, and user adoption in every project.</p>
+                </div>
+                <div class="profile-picture">
+                    <img src="path-to-your-profile-picture.jpg" alt="Jeffrey Uwoghiren">
+                </div>
             </div>
             <div class="elevator-pitch">
                 <h3>Elevator Pitch</h3>
@@ -708,7 +680,7 @@
                 const targetId = this.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetId);
                 window.scrollTo({
-                    top: targetSection.offsetTop - 80, // Adjusted for navbar height
+                    top: targetSection.offsetTop - 80,
                     behavior: 'smooth'
                 });
             });
@@ -723,9 +695,7 @@
                 }
             });
         }, { threshold: 0.1 });
-
         observer.observe(contactSection);
     </script>
 </body>
 </html>
-
