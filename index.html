@@ -13,16 +13,17 @@
         }
 
         body {
-            background-color: #FAFAFA;
-            color: #333333;
+            background-color: #FAFAFA; /* Soft White */
+            color: #333333; /* Charcoal Gray */
             overflow-x: hidden;
         }
 
+        /* Navbar */
         .navbar {
             position: absolute;
             top: 0;
             width: 100%;
-            background-color: #00A1E0;
+            background-color: #00A1E0; /* Salesforce Blue */
             display: flex;
             justify-content: center;
             padding: 20px 0;
@@ -38,7 +39,7 @@
         }
 
         .navbar a {
-            color: #E1F5FE;
+            color: #E1F5FE; /* Sky Blue Tint */
             text-decoration: none;
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
@@ -48,10 +49,11 @@
         }
 
         .navbar a:hover {
-            color: #4B0082;
+            color: #4B0082; /* Vibrant Indigo */
             transform: scale(1.1);
         }
 
+        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
@@ -61,7 +63,7 @@
             background: url('https://images.unsplash.com/photo-1497366216548-37526070297c') no-repeat center center/cover;
             position: relative;
             animation: popIn 0.05s ease-in forwards;
-            padding-top: 80px;
+            padding-top: 80px; /* Space for navbar */
         }
 
         @keyframes popIn {
@@ -89,7 +91,7 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             font-size: 36px;
-            color: #E1F5FE;
+            color: #E1F5FE; /* Sky Blue Tint */
             z-index: 1;
             animation: fadeInText 2s ease-in;
         }
@@ -105,6 +107,7 @@
             }
         }
 
+        /* About Me Section */
         .about {
             padding: 80px 20px;
             max-width: 1000px;
@@ -121,7 +124,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 161, 224, 0.3);
+            background: rgba(0, 161, 224, 0.3); /* Lighter Salesforce Blue overlay for better text visibility */
             border-radius: 10px;
             animation: fadeInBg 0.1s ease-in;
         }
@@ -137,17 +140,16 @@
 
         .about-content {
             z-index: 1;
-            animation: fadeInText 1s ease-in forwards;
+            animation: fadeInText 1s ease-in forwards; /* Ensure text stays opaque */
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            position: relative;
         }
 
         .about-text {
             flex: 1;
             min-width: 300px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for text clarity */
             padding: 20px;
             border-radius: 10px;
         }
@@ -156,7 +158,7 @@
             font-family: 'Poppins', sans-serif;
             font-weight: 700;
             font-size: 36px;
-            color: #333333;
+            color: #333333; /* Charcoal Gray */
             margin-bottom: 20px;
         }
 
@@ -164,22 +166,7 @@
             font-family: 'Open Sans', sans-serif;
             font-size: 16px;
             line-height: 1.6;
-            color: #333333;
-        }
-
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .about-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 3px solid #4B0082;
+            color: #333333; /* Charcoal Gray for high contrast */
         }
 
         .elevator-pitch {
@@ -200,37 +187,545 @@
             width: 100%;
             max-width: 400px;
             border-radius: 10px;
-            border: 2px solid #4B0082;
+            border: 2px solid #4B0082; /* Vibrant Indigo */
         }
 
-        /* Other sections remain the same... */
+        /* Experience Section */
+        .experience {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .experience h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .experience-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .experience-timeline,
+        .services {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .experience-item,
+        .service-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #E1F5FE; /* Sky Blue Tint */
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .experience-item:hover,
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-item h3,
+        .service-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #00A1E0; /* Salesforce Blue */
+        }
+
+        .experience-item p,
+        .service-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        /* Education Section */
+        .experience {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .experience h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .experience-content {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .experience-timeline,
+        .services {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .experience-item,
+        .service-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #E1F5FE; /* Sky Blue Tint */
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .experience-item:hover,
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .experience-item h3,
+        .service-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #00A1E0; /* Salesforce Blue */
+        }
+
+        .experience-item p,
+        .service-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        /* Education Section */
+        .education {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .education h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #E1F5FE; /* Sky Blue Tint */
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .education-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #00A1E0; /* Salesforce Blue */
+        }
+
+        .education-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .projects h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .project-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .project-item {
+            width: 300px;
+            background: #E1F5FE; /* Sky Blue Tint */
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 2px solid #4B0082; /* Vibrant Indigo */
+        }
+
+        .project-item h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: #00A1E0; /* Salesforce Blue */
+        }
+
+        .project-item p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 20px;
+            background: linear-gradient(45deg, #FAFAFA, #E1F5FE, #00A1E0); /* Soft White to Salesforce Blue */
+            text-align: center;
+        }
+
+        .testimonials h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 40px;
+            animation: fadeInText 1s ease-in;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background: #FFFFFF; /* White for contrast */
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            border: 1px solid #2ECC71; /* Emerald Green */
+            transition: transform 0.3s;
+        }
+
+        .testimonial img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+            border: 2px solid #F39C12; /* Goldenrod */
+        }
+
+        .testimonial img:hover {
+            transform: scale(1.2);
+        }
+
+        .testimonial p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .testimonial h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #00A1E0; /* Salesforce Blue */
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+            background: #E1F5FE; /* Sky Blue Tint */
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+
+        .contact.visible {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .contact h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 36px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #4B0082; /* Vibrant Indigo */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #00A1E0; /* Salesforce Blue */
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 15px;
+            border: 1px solid #333333;
+            border-radius: 5px;
+            background: #FFFFFF;
+            color: #333333;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+        }
+
+        .contact button {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background: #4B0082; /* Vibrant Indigo */
+            color: #FFFFFF;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background: #00A1E0; /* Salesforce Blue */
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #00A1E0; /* Salesforce Blue */
+            color: #E1F5FE; /* Sky Blue Tint */
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-
+    <!-- Navbar -->
     <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#about">About</a>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <section class="hero">
-        <h1>Welcome to My Salesforce Admin Portfolio</h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to Jeffrey Uwoghiren's Portfolio</h1>
     </section>
 
-    <section class="about" id="about">
+    <!-- About Me Section -->
+    <section id="about" class="about">
         <div class="about-content">
             <div class="about-text">
                 <h2>About Me</h2>
-                <p>Hi, I'm Jeffrey Uwoghiren, a passionate Salesforce Administrator dedicated to streamlining business processes and enhancing user experience through smart CRM solutions. I have a strong background in business analysis and a growing list of certifications and hands-on experience with Salesforce tools.</p>
+                <p>I am Jeffrey Uwoghiren, an experienced Salesforce Administrator dedicated to optimizing business processes through innovative Salesforce solutions. With a deep understanding of Salesforce configuration, automation, and user management, I help organizations streamline operations, enhance data integrity, and drive growth. My expertise includes creating custom workflows, reports, dashboards, and ensuring seamless integration to meet unique business needs. Passionate about delivering scalable solutions, I prioritize efficiency, security, and user adoption in every project.</p>
             </div>
-            <div class="about-image">
-                <img src="https://via.placeholder.com/350x350.png?text=Jeffrey+Uwoghiren" alt="Jeffrey Uwoghiren">
+            <div class="elevator-pitch">
+                <h3>Elevator Pitch</h3>
+                <video controls>
+                    <source src="path-to-your-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="experience-content">
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3>Salesforce Administrator - TechCorp Solutions</h3>
+                    <p>Jan 2022 - Present</p>
+                    <p>Led Salesforce customization for a 200-user organization, implementing automated workflows, custom objects, and Lightning components. Improved sales pipeline efficiency by 30% through optimized reports and dashboards.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Junior Salesforce Admin - Innovate Systems</h3>
+                    <p>Jun 2019 - Dec 2021</p>
+                    <p>Managed user accounts, security settings, and data imports. Developed validation rules and process builder automations, reducing manual data entry by 25%.</p>
+                </div>
+            </div>
+            <div class="services">
+                <h3>Core Services</h3>
+                <div class="service-item">
+                    <h3>Workflow Automation</h3>
+                    <p>Design and implement Process Builder and Flow automations to streamline repetitive tasks.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Reports & Dashboards</h3>
+                    <p>Create dynamic reports and dashboards to provide real-time business insights.</p>
+                </div>
+                <div class="service-item">
+                    <h3>User Management</h3>
+                    <p>Configure roles, profiles, and permission sets to ensure secure and efficient access control.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Data Integrity</h3>
+                    <p>Implement validation rules and duplicate management to maintain clean, reliable data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>ALX Salesforce Administrator Certification</h3>
+            <p>Completed: 2021</p>
+            <p>Comprehensive training in Salesforce administration, covering configuration, automation, security, and app development.</p>
+        </div>
+        <div class="education-item">
+            <h3>B.Sc. Computer Science - University of Lagos</h3>
+            <p>Graduated: 2019</p>
+            <p>Studied software development, database management, and system administration, providing a strong technical foundation for Salesforce expertise.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-container">
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Portfolio Dashboard">
+                <h3>Portfolio Dashboard</h3>
+                <p>Built a custom Salesforce dashboard for a client to track sales KPIs, featuring Lightning components and dynamic filters.</p>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" alt="Sales Cloud Implementation">
+                <h3>Sales Cloud Implementation</h3>
+                <p>Configured Sales Cloud for a mid-sized firm, including lead management, opportunity tracking, and automated email alerts.</p>
+            </div>
+            <div class="project-item">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e84b01" alt="Custom App">
+                <h3>Custom App Development</h3>
+                <p>Developed a Salesforce app using Apex and Visualforce to manage customer support tickets, reducing response time by 20%.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" alt="Client 1">
+                <p>"Jeffrey transformed our Salesforce environment, making it intuitive and efficient. His expertise is unmatched!"</p>
+                <h4>Jane Doe, CEO</h4>
+            </div>
+            <div class="testimonial">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7" alt="Client 2">
+                <p>"Working with Jeffrey was a game-changer. His dashboards gave us insights we never had before."</p>
+                <h4>John Smith, Operations Manager</h4>
+            </div>
+            <div class="testimonial">
+                <img src="https://images.unsplash.com/photo-1534528744316-7d86d22258c9" alt="Client 3">
+                <p>"Jeffrey's automation solutions saved us countless hours. Highly recommend his services!"</p>
+                <h4>Emily Chen, Sales Director</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:jeffreyuwoghiren@gmail.com">jeffreyuwoghiren@gmail.com</a></p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Jeffrey Uwoghiren. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll for Navbar Links
+        document.querySelectorAll('.navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80, // Adjusted for navbar height
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll Animation for Contact Section
+        const contactSection = document.querySelector('.contact');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(contactSection);
+    </script>
 </body>
 </html>
+
